@@ -9,7 +9,7 @@ class FileData():
         self.set_concentration()
     
     def set_concentration(self):
-        self.concentration = self.file_name.split()[0]
+        self.concentration = self.file_name.replace('_',' ').split()[0]
         if self.concentration.lower() == 'control':
                         self.concentration = '0'
     
